@@ -5,7 +5,8 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" />
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
         <script src="js/jquery.inview.min.js"></script>
 
         <!-- Materialize Import -->
@@ -37,23 +38,36 @@
                 $('.slider').slider();
             });
         </script>
+        <script>
+            $(function(){
+                $('a').click(function(){
+                    var url = $(this).attr('href');
+                    if (url != '') {
+                        $('body').fadeOut(500);
+                        setTimeout(function(){
+                            location.href = url;
+                        }, 1000);
+                    }
+                    return false;
+                });
+            });
+        </script>
     </head>
     <body>
         <div id="wrap">
-            <div class='wave -one'></div>
-            <div class='wave -two'></div>
-            <div class='wave -three'></div>
             <nav>
                 <div class="nav-wrapper light-blue lighten-3">
                     <div class="container">
                         <a href="#!" class="brand-logo">BiblioPackers</a>
                         <a href="#" data-target="mobilemenu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                         <ul class="right hide-on-med-and-down">
+                            <li><a href="recruit/">メンバー募集</a></li>
                             <li><a href="https://twitter.com/BiblioPackers/"><i class="fab fa-twitter fa-2x"></i></a></li>
                         </ul>
                     </div>
                 </div>
                 <ul class="sidenav" id="mobilemenu">
+                    <li><a href="recruit/">メンバー募集</a></li>
                     <li><a href="https://twitter.com/BiblioPackers">Twitter</a></li>
                 </ul>
             </nav>
@@ -187,6 +201,12 @@
                                 <p>Auditor</p>
                                 <br><br>
                             </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div align="center">
+                            <h3><b>メンバー募集しています！</b></h3>
+                            <a href="recruit/" class="btn-large">メンバー申し込みをする</a>
                         </div>
                     </div>
                 </div>
