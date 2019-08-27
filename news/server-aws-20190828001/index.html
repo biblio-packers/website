@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html charset="UTF-8">
+    <head>
+        <meta charset="UTF-8" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" />
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+        <script src="js/jquery.inview.min.js"></script>
+
+        <!-- Materialize Import -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+        <!-- Original Style -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <meta name="author" content="Ryo Nakagome" />
+        <meta name="description" content="マインクラフト系イベント管理団体「Biblio Packers」のWebサイトです。" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://biblio-packers.tokyo/" />
+        <meta property="og:site_name" content="Biblio Packers" />
+        <meta property="og:title" content="Top" />
+        <meta property="og:description" content="マインクラフト系イベント管理団体「Biblio Packers」のWebサイトです。" />
+        <meta property="og:image" content="img/siteimg.png" />
+        <title>Biblio Packers</title>
+
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <script>
+            $(document).ready(function(){
+                $('.sidenav').sidenav();
+                $('body').hide().fadeIn(500);
+                $('.slider').slider();
+            });
+        </script>
+        <script>
+            $(function(){
+                $('a').click(function(){
+                    var url = $(this).attr('href');
+                    if (url != '') {
+                        $('body').fadeOut(500);
+                        setTimeout(function(){
+                            location.href = url;
+                        }, 1000);
+                    }
+                    return false;
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="wrap">
+            <nav>
+                <div class="nav-wrapper light-blue lighten-3">
+                    <div class="container">
+                        <a href="../../" class="brand-logo">BiblioPackers</a>
+                        <a href="../../" data-target="mobilemenu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="../../news/">ニュース</a></li>
+                            <li><a href="https://twitter.com/BiblioPackers/"><i class="fab fa-twitter fa-2x"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="sidenav" id="mobilemenu">
+                    <li><a href="../../news/">ニュース</a></li>
+                    <li><a href="https://twitter.com/BiblioPackers">Twitter</a></li>
+                </ul>
+            </nav>
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <div align="center">
+                            <h3><b>マイフェス2019Webサイト サーバー移行による一部機能停止のお知らせ</b></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <p>マイフェス2019イベントWebサイト(<a href="https://myfes.biblio-packers.net/">https://myfes.biblio-packers.net</a>)は、サーバーの安定化・サイトの軽量化を目的に、Amazon Web Serviceが提供する「AWS Lightsail」へのサーバーの移行を実施することとなりました。実施に際し、データベースの整合性を取るためにWebサイトで利用可能な一部の機能の提供を一時停止致します。<br><br>実施期間: <b>2019年8月27日～8月29日(予定)</b><br><br></br>利用できなくなる機能: <b>マイフェス2019 e-ショップでの販売商品閲覧、購入など全ての取引</b><br><br></br>ご迷惑をおかけ致しますが、何卒ご了承、ご協力をよろしくお願い致します。</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <a href="../../news/" class="btn-large">ニュース一覧へ戻る</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
